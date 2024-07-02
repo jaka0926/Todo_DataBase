@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		CE6F6B342C34295B0094EC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B332C34295B0094EC2E /* AppDelegate.swift */; };
 		CE6F6B362C34295B0094EC2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B352C34295B0094EC2E /* SceneDelegate.swift */; };
-		CE6F6B382C34295B0094EC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B372C34295B0094EC2E /* ViewController.swift */; };
+		CE6F6B382C34295B0094EC2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B372C34295B0094EC2E /* MainViewController.swift */; };
 		CE6F6B3B2C34295B0094EC2E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE6F6B3A2C34295B0094EC2E /* Base */; };
 		CE6F6B3D2C34295D0094EC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE6F6B3C2C34295D0094EC2E /* Assets.xcassets */; };
 		CE6F6B402C34295D0094EC2E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE6F6B3F2C34295D0094EC2E /* Base */; };
+		CE6F6B492C342B830094EC2E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6F6B482C342B830094EC2E /* RealmSwift */; };
+		CE6F6B4C2C342B9A0094EC2E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE6F6B4B2C342B9A0094EC2E /* SnapKit */; };
+		CE6F6B4E2C342C7B0094EC2E /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B4D2C342C7B0094EC2E /* TodoListViewController.swift */; };
+		CE6F6B522C342CFD0094EC2E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B512C342CFD0094EC2E /* RealmModel.swift */; };
+		CE6F6B542C3432A20094EC2E /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */; };
+		CE6F6B562C3435F20094EC2E /* _TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */; };
+		CE6F6B592C3444350094EC2E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B582C3444350094EC2E /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE6F6B302C34295B0094EC2E /* Todo_DataBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo_DataBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F6B332C34295B0094EC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6F6B352C34295B0094EC2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE6F6B372C34295B0094EC2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE6F6B372C34295B0094EC2E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE6F6B3A2C34295B0094EC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE6F6B3C2C34295D0094EC2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE6F6B3F2C34295D0094EC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE6F6B412C34295D0094EC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE6F6B4D2C342C7B0094EC2E /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		CE6F6B512C342CFD0094EC2E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		CE6F6B582C3444350094EC2E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6F6B492C342B830094EC2E /* RealmSwift in Frameworks */,
+				CE6F6B4C2C342B9A0094EC2E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,44 @@
 		CE6F6B322C34295B0094EC2E /* Todo_DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				CE6F6B572C3444190094EC2E /* Base */,
+				CE6F6B502C342CEE0094EC2E /* DataBase */,
+				CE6F6B4F2C342CD40094EC2E /* Pages */,
 				CE6F6B332C34295B0094EC2E /* AppDelegate.swift */,
 				CE6F6B352C34295B0094EC2E /* SceneDelegate.swift */,
-				CE6F6B372C34295B0094EC2E /* ViewController.swift */,
 				CE6F6B392C34295B0094EC2E /* Main.storyboard */,
 				CE6F6B3C2C34295D0094EC2E /* Assets.xcassets */,
 				CE6F6B3E2C34295D0094EC2E /* LaunchScreen.storyboard */,
 				CE6F6B412C34295D0094EC2E /* Info.plist */,
 			);
 			path = Todo_DataBase;
+			sourceTree = "<group>";
+		};
+		CE6F6B4F2C342CD40094EC2E /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F6B372C34295B0094EC2E /* MainViewController.swift */,
+				CE6F6B4D2C342C7B0094EC2E /* TodoListViewController.swift */,
+				CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */,
+				CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		CE6F6B502C342CEE0094EC2E /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F6B512C342CFD0094EC2E /* RealmModel.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		CE6F6B572C3444190094EC2E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F6B582C3444350094EC2E /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +126,10 @@
 			dependencies = (
 			);
 			name = Todo_DataBase;
+			packageProductDependencies = (
+				CE6F6B482C342B830094EC2E /* RealmSwift */,
+				CE6F6B4B2C342B9A0094EC2E /* SnapKit */,
+			);
 			productName = Todo_DataBase;
 			productReference = CE6F6B302C34295B0094EC2E /* Todo_DataBase.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +158,10 @@
 				Base,
 			);
 			mainGroup = CE6F6B272C34295B0094EC2E;
+			packageReferences = (
+				CE6F6B472C342B830094EC2E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CE6F6B4A2C342B9A0094EC2E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CE6F6B312C34295B0094EC2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6F6B382C34295B0094EC2E /* ViewController.swift in Sources */,
+				CE6F6B4E2C342C7B0094EC2E /* TodoListViewController.swift in Sources */,
+				CE6F6B542C3432A20094EC2E /* AddNewViewController.swift in Sources */,
+				CE6F6B562C3435F20094EC2E /* _TodoListTableViewCell.swift in Sources */,
+				CE6F6B382C34295B0094EC2E /* MainViewController.swift in Sources */,
 				CE6F6B342C34295B0094EC2E /* AppDelegate.swift in Sources */,
+				CE6F6B592C3444350094EC2E /* BaseViewController.swift in Sources */,
+				CE6F6B522C342CFD0094EC2E /* RealmModel.swift in Sources */,
 				CE6F6B362C34295B0094EC2E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,8 +354,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +363,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sesac.Todo-DataBase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,8 +386,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +395,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sesac.Todo-DataBase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +427,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE6F6B472C342B830094EC2E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.52.1;
+			};
+		};
+		CE6F6B4A2C342B9A0094EC2E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE6F6B482C342B830094EC2E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6F6B472C342B830094EC2E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		CE6F6B4B2C342B9A0094EC2E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6F6B4A2C342B9A0094EC2E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE6F6B282C34295B0094EC2E /* Project object */;
 }
