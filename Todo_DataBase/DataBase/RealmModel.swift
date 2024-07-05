@@ -12,9 +12,9 @@ class MainTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var title: String
     @Persisted var textContent: String?
-    @Persisted var deadLine: Date?
+    @Persisted var deadLine: String?
     
-    convenience init(title: String, textContent: String?, deadLine: Date?) {
+    convenience init(title: String, textContent: String?, deadLine: String?) {
         self.init()
         self.id = id
         self.title = title

@@ -11,6 +11,7 @@
 		CE6B6BEF2C35A24D00D3110A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BEE2C35A24D00D3110A /* DatePickerViewController.swift */; };
 		CE6B6BF12C35A56100D3110A /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BF02C35A56100D3110A /* TagViewController.swift */; };
 		CE6B6BF32C35A72D00D3110A /* PriorityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BF22C35A72D00D3110A /* PriorityViewController.swift */; };
+		CE6BD0542C3688B700945A38 /* _MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6BD0532C3688B700945A38 /* _MainCollectionViewCell.swift */; };
 		CE6F6B342C34295B0094EC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B332C34295B0094EC2E /* AppDelegate.swift */; };
 		CE6F6B362C34295B0094EC2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B352C34295B0094EC2E /* SceneDelegate.swift */; };
 		CE6F6B382C34295B0094EC2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B372C34295B0094EC2E /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		CE6B6BEE2C35A24D00D3110A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		CE6B6BF02C35A56100D3110A /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		CE6B6BF22C35A72D00D3110A /* PriorityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityViewController.swift; sourceTree = "<group>"; };
+		CE6BD0532C3688B700945A38 /* _MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE6F6B302C34295B0094EC2E /* Todo_DataBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo_DataBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6F6B332C34295B0094EC2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE6F6B352C34295B0094EC2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				CE6B6BEA2C35A19A00D3110A /* ConfigPages */,
 				CE6F6B372C34295B0094EC2E /* MainViewController.swift */,
+				CE6BD0532C3688B700945A38 /* _MainCollectionViewCell.swift */,
 				CE6F6B4D2C342C7B0094EC2E /* TodoListViewController.swift */,
 				CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */,
 				CE6B6BE82C359ACB00D3110A /* UIButtonConfig.swift */,
@@ -217,6 +220,7 @@
 				CE6F6B592C3444350094EC2E /* BaseViewController.swift in Sources */,
 				CE6B6BF12C35A56100D3110A /* TagViewController.swift in Sources */,
 				CE6B6BEF2C35A24D00D3110A /* DatePickerViewController.swift in Sources */,
+				CE6BD0542C3688B700945A38 /* _MainCollectionViewCell.swift in Sources */,
 				CE6B6BF32C35A72D00D3110A /* PriorityViewController.swift in Sources */,
 				CE6F6B522C342CFD0094EC2E /* RealmModel.swift in Sources */,
 				CE6F6B362C34295B0094EC2E /* SceneDelegate.swift in Sources */,

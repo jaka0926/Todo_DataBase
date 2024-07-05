@@ -23,19 +23,24 @@ class TodoListViewController: BaseViewController {
     var list: Results<MainTable>!
     let realm = try! Realm()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(#function)
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(leftBarButtonClicked))
         
-        list = realm.objects(MainTable.self)
     }
+    
     @objc func leftBarButtonClicked() {
-        
-        
-        let vc = AddNewViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        present(nav, animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     override func configureHierarchy() {
@@ -73,7 +78,7 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
         let data = list[indexPath.row]
         cell.titleLabel.text = data.title
         cell.contentLabel.text = data.textContent
-        cell.subLabel.text = "\(data.deadLine!.formatted())"
+        cell.subLabel.text = data.deadLine
         
         return cell
     }

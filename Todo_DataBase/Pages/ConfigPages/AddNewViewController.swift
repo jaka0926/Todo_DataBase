@@ -61,14 +61,14 @@ class AddNewViewController: BaseViewController {
         }
         
         //Record/Row 생성
-        //let data = MainTable(title: titleLabel.text!, textContent: contentLabel.text ?? "", deadLine: deadlineDatePicker.date)
+        let data = MainTable(title: titleLabel.text!, textContent: contentLabel.text ?? "", deadLine: dateValue.text)
         
         //Realm에 data를 추가하기
         try! realm.write {
-            //realm.add(data)
+            realm.add(data)
         }
-//        TodoListViewController().tableView.reloadData()
-        
+        let vc = MainViewController()
+        vc.reloadData()
         dismiss(animated: true)
     }
     
