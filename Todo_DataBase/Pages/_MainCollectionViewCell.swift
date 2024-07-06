@@ -38,8 +38,6 @@ class MainCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .darkGray
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
-        
-        
     }
     func configureUI(_ titleData: String, _ iconData: String, iconColor: UIColor, _ itemCount: Int) {
         icon.backgroundColor = iconColor

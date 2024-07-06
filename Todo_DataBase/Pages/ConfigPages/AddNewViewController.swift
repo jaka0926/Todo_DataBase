@@ -67,8 +67,6 @@ class AddNewViewController: BaseViewController {
         try! realm.write {
             realm.add(data)
         }
-        let vc = MainViewController()
-        vc.reloadData()
         dismiss(animated: true)
     }
     
