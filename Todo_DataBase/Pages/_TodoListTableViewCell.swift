@@ -45,15 +45,12 @@ class TodoListTableViewCell: UITableViewCell {
         }
     }
     func configureUI() {
-        titleLabel.text = "Text"
         titleLabel.textColor = .white
         titleLabel.font = .boldSystemFont(ofSize: 18)
-        
+    
         contentLabel.textColor = .darkGray
         contentLabel.font = .boldSystemFont(ofSize: 17)
-        contentLabel.text = "Something"
-        
+
         subLabel.textColor = .darkGray
-        subLabel.text = "Home"
     }
 }

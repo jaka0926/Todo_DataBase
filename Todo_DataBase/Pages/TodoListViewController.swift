@@ -76,19 +76,29 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TodoListTableViewCell.id, for: indexPath) as! TodoListTableViewCell
         
         let data = list[indexPath.row]
-        cell.titleLabel.text = data.title
+        cell.titleLabel.text = (data.priority ?? "") + data.title
         cell.contentLabel.text = data.textContent
-        cell.subLabel.text = data.deadLine
+        
+        let tag = data.tag ?? ""
+        cell.subLabel.text = (data.deadLine ?? "") + (tag != "" ? "#\(tag)" : "")
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = list[indexPath.row]
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        try! realm.write {
-            realm.delete(data)
+        let delete = UIContextualAction(style: .destructive, title: "삭제") { action, view, completionHandler in
+            print("Cell Deleted")
+            
+            try! self.realm.write {
+                self.realm.delete(self.list[indexPath.row])
+            }
+            tableView.reloadData()
         }
-        tableView.reloadData()
+        let flag = UIContextualAction(style: .normal, title: "깃발") { action, view, completionHandler in
+            print("Added to flagged list")
+        }
+        flag.backgroundColor = .systemOrange
+        return UISwipeActionsConfiguration(actions: [delete, flag])
     }
 }

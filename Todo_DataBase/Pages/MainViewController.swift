@@ -54,6 +54,7 @@ class MainViewController: BaseViewController {
         vc.list = realm.objects(MainTable.self)
         
     }
+    
     override func configureHierarchy() {
         view.addSubview(titleLabel)
         view.addSubview(collView)
