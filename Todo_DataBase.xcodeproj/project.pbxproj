@@ -25,6 +25,7 @@
 		CE6F6B542C3432A20094EC2E /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */; };
 		CE6F6B562C3435F20094EC2E /* _TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */; };
 		CE6F6B592C3444350094EC2E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F6B582C3444350094EC2E /* BaseViewController.swift */; };
+		CE7FFE012C3BC50800C289BB /* TableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7FFE002C3BC50800C289BB /* TableRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
 		CE6F6B552C3435F20094EC2E /* _TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _TodoListTableViewCell.swift; sourceTree = "<group>"; };
 		CE6F6B582C3444350094EC2E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE7FFE002C3BC50800C289BB /* TableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6F6B512C342CFD0094EC2E /* RealmModel.swift */,
+				CE7FFE002C3BC50800C289BB /* TableRepository.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				CE6F6B542C3432A20094EC2E /* AddNewViewController.swift in Sources */,
 				CE6F6B562C3435F20094EC2E /* _TodoListTableViewCell.swift in Sources */,
 				CE6F6B382C34295B0094EC2E /* MainViewController.swift in Sources */,
+				CE7FFE012C3BC50800C289BB /* TableRepository.swift in Sources */,
 				CE6F6B342C34295B0094EC2E /* AppDelegate.swift in Sources */,
 				CE6F6B592C3444350094EC2E /* BaseViewController.swift in Sources */,
 				CE6B6BF12C35A56100D3110A /* TagViewController.swift in Sources */,

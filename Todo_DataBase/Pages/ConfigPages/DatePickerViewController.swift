@@ -11,7 +11,7 @@ import SnapKit
 class DatePickerViewController: UIViewController {
 
     let dateSetting = UIDatePicker()
-    var dateInfo: ((String) -> Void)?
+    var dateInfo: ((Date, String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +33,6 @@ class DatePickerViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd (EEEE)"
         let formattedDate = dateFormatter.string(from: rawDate)
-        dateInfo?(formattedDate)
+        dateInfo?(rawDate, formattedDate)
     }
 }

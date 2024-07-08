@@ -20,8 +20,11 @@ class TodoListViewController: BaseViewController {
     }()
     
     let tableView = UITableView()
-    var list: Results<MainTable>!
+    var list: [MainTable] = []
+    
     let realm = try! Realm()
+    var folder: Folder?
+    let repository = TableRepository()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,6 +35,11 @@ class TodoListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let folder = folder {
+            let value = folder.detail
+            list = Array(value)
+        }
+        
         print(#function)
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
@@ -87,12 +95,11 @@ extension TodoListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        let data = list[indexPath.row]
         let delete = UIContextualAction(style: .destructive, title: "삭제") { action, view, completionHandler in
             print("Cell Deleted")
             
-            try! self.realm.write {
-                self.realm.delete(self.list[indexPath.row])
-            }
+            self.repository.deleteItem(data)
             tableView.reloadData()
         }
         let flag = UIContextualAction(style: .normal, title: "깃발") { action, view, completionHandler in

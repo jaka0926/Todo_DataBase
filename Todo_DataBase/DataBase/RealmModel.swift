@@ -8,6 +8,14 @@
 import Foundation
 import RealmSwift
 
+class Folder: Object {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var title: String
+    @Persisted var iconImage: String
+    @Persisted var iconBg: String?
+    @Persisted var detail: List<MainTable>
+}
+
 class MainTable: Object {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var title: String
@@ -15,6 +23,8 @@ class MainTable: Object {
     @Persisted var deadLine: String?
     @Persisted var priority: String?
     @Persisted var tag: String?
+    
+    @Persisted(originProperty: "detail") var main: LinkingObjects<Folder>
     
     convenience init(title: String, textContent: String?, deadLine: String?, priority: String?, tag: String?) {
         self.init()

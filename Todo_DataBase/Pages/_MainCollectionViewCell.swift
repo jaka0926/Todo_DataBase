@@ -39,8 +39,8 @@ class MainCollectionViewCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
     }
-    func configureUI(_ titleData: String, _ iconData: String, iconColor: UIColor, _ itemCount: Int) {
-        icon.backgroundColor = iconColor
+    func configureUI(_ titleData: String, _ iconData: String, _ itemCount: Int) {
+        icon.backgroundColor = .systemBlue
         icon.tintColor = .white
         icon.layer.cornerRadius = 20
         let configuration = UIImage.SymbolConfiguration(pointSize: 25)

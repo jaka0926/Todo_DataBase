@@ -16,6 +16,7 @@ class AddNewViewController: BaseViewController {
     let titleLabel = UITextField()
     let contentLabel = UITextField()
     let dateConfig = UIButton()
+    var rawDate = Date()
     let dateValue = UILabel()
     let tagConfig = UIButton()
     let tagValue = UILabel()
@@ -24,6 +25,10 @@ class AddNewViewController: BaseViewController {
     let priorityIndicator = UILabel()
     let imageConfig = UIButton()
     let selectedImageView = UIImageView()
+    
+    let calender = Calendar.current
+    let repository = TableRepository()
+    //var folder: Folder?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +59,7 @@ class AddNewViewController: BaseViewController {
     @objc func leftBarButtonClicked() {
         dismiss(animated: true)
     }
-    @objc func rightBarButtonClicked() {
-        
-        
+    @objc func rightBarButtonClicked() { //저장 버튼 누름
         
         //Create 1. Realm 위치 찾기
         let realm = try! Realm()
@@ -69,10 +72,20 @@ class AddNewViewController: BaseViewController {
         //Record/Row 생성
         let data = MainTable(title: titleLabel.text!, textContent: contentLabel.text ?? "", deadLine: dateValue.text, priority: priorityIndicator.text, tag: tagValue.text)
         
+        let folderName: String
         //Realm에 data를 추가하기
-        try! realm.write {
-            realm.add(data)
+        if calender.isDateInToday(rawDate) {
+            folderName = "오늘"
         }
+        else {
+            folderName = "예정"
+        }
+        
+        let folder = realm.objects(Folder.self).where {
+            $0.title == folderName
+        }.first
+        
+        repository.createItem(data, folder: folder!)
         dismiss(animated: true)
     }
     
@@ -179,9 +192,9 @@ class AddNewViewController: BaseViewController {
     @objc func dateConfigButtonClicked() {
         let vc = DatePickerViewController()
         vc.title = dateConfig.configuration?.title
-        vc.dateInfo = { value in
-            print(value)
-            self.dateValue.text = value
+        vc.dateInfo = { rawDate, formattedDate in
+            self.dateValue.text = formattedDate
+            self.rawDate = rawDate
         }
         navigationController?.pushViewController(vc, animated: true)
     }

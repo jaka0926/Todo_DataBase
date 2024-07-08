@@ -32,14 +32,14 @@ class MainViewController: BaseViewController {
         layout.collectionView?.isScrollEnabled = false
         return layout
     }
-    var list: [[Any]] = []
-    let realm = try! Realm()
-    let vc = TodoListViewController()
+    var list: [Folder] = []
+    let repository = TableRepository()
+    //let vc = TodoListViewController()
     
-    func addNewCell(_ title: String, _ icon: String, _ iconColor: UIColor) {
-        let item = [title, icon, iconColor] as [Any]
-        list.append(item)
-    }
+//    func addNewCell(_ title: String, _ icon: String, _ iconColor: UIColor) {
+//        let item = [title, icon, iconColor] as [Any]
+//        list.append(item)
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,8 +50,12 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        repository.detectRealmURL()
+        
+        list = repository.fetchFolder()
+        print(list)
         view.backgroundColor = .black
-        vc.list = realm.objects(MainTable.self)
+        //vc.list = realm.objects(MainTable.self)
         
     }
     
@@ -82,11 +86,11 @@ class MainViewController: BaseViewController {
         collView.dataSource = self
         collView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.id)
         
-        addNewCell("오늘", "sun.max.fill", .systemBlue)
-        addNewCell("예정", "calendar", .systemRed)
-        addNewCell("전체", "tray.fill", .systemGray)
-        addNewCell("깃발 표시", "flag.fill", .systemOrange)
-        addNewCell("완료됨", "checkmark", .systemGreen)
+//        addNewCell("오늘", "sun.max.fill", .systemBlue)
+//        addNewCell("예정", "calendar", .systemRed)
+//        addNewCell("전체", "tray.fill", .systemGray)
+//        addNewCell("깃발 표시", "flag.fill", .systemOrange)
+//        addNewCell("완료됨", "checkmark", .systemGreen)
         
         addListItemButton.setTitleColor(.systemBlue, for: .normal)
         addListItemButton.setImage(UIImage(systemName: "plus.circle.fill"), for: .normal)
@@ -112,14 +116,18 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.id, for: indexPath) as! MainCollectionViewCell
         
-        let titleData = list[indexPath.row][0]
-        let iconData = list[indexPath.row][1]
-        let iconColor = list[indexPath.row][2]
-        cell.configureUI(titleData as! String, iconData as! String, iconColor: iconColor as! UIColor, vc.list.count)
+        let data = list[indexPath.row]
+        let titleData = data.title
+        let iconData = data.iconImage
+        cell.configureUI(titleData, iconData, data.detail.count)
         
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let vc = TodoListViewController()
+        vc.folder = list[indexPath.row]
+        print(list[indexPath.row])
         navigationController?.pushViewController(vc, animated: true)
     }
 }
