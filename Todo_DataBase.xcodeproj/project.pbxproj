@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE65E2E62C3DABC000202E04 /* DatePickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65E2E52C3DABC000202E04 /* DatePickerModel.swift */; };
 		CE6B6BE92C359ACB00D3110A /* UIButtonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BE82C359ACB00D3110A /* UIButtonConfig.swift */; };
 		CE6B6BEF2C35A24D00D3110A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BEE2C35A24D00D3110A /* DatePickerViewController.swift */; };
 		CE6B6BF12C35A56100D3110A /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B6BF02C35A56100D3110A /* TagViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE65E2E52C3DABC000202E04 /* DatePickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerModel.swift; sourceTree = "<group>"; };
 		CE6B6BE82C359ACB00D3110A /* UIButtonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonConfig.swift; sourceTree = "<group>"; };
 		CE6B6BEE2C35A24D00D3110A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		CE6B6BF02C35A56100D3110A /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				CE6F6B532C3432A20094EC2E /* AddNewViewController.swift */,
 				CE6B6BEE2C35A24D00D3110A /* DatePickerViewController.swift */,
+				CE65E2E52C3DABC000202E04 /* DatePickerModel.swift */,
 				CE6B6BF02C35A56100D3110A /* TagViewController.swift */,
 				CE6B6BF22C35A72D00D3110A /* PriorityViewController.swift */,
 			);
@@ -229,6 +232,7 @@
 				CE6F6B522C342CFD0094EC2E /* RealmModel.swift in Sources */,
 				CE6F6B362C34295B0094EC2E /* SceneDelegate.swift in Sources */,
 				CE6B6BE92C359ACB00D3110A /* UIButtonConfig.swift in Sources */,
+				CE65E2E62C3DABC000202E04 /* DatePickerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
